@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt – Martin Dietz · Freelance udvikler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo_dietz.png" alt="Dietz Code &amp; Control" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Forside</a>
+                <a href="services.html">Ydelser</a>
+                <a href="cases.html">Cases</a>
+                <a href="about.html">Om mig</a>
+                <a href="stack.html">Tech stack</a>
+                <a href="contact.html" aria-current="page">Kontakt</a>
+            </nav>
+            <button class="nav-cta" onclick="window.location.href='contact.html'">
+                Kontakt mig
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Kontakt</h1>
+            <p class="section-subtitle">
+                Har du et konkret projekt, et anlæg der driller, eller en idé der skal prøves af i praksis?  
+                Skriv eller ring – så tager vi en uforpligtende snak om, hvad der giver mening.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h2 style="margin-top:0;margin-bottom:0.5rem;">Direkte kontakt</h2>
+                    <div class="contact-info">
+                        <p><span class="label">Navn:</span> Martin Dietz</p>
+                        <p><span class="label">E-mail:</span> <a href="mailto:din@mail.dk">din@mail.dk</a></p>
+                        <p><span class="label">Telefon:</span> +45 xx xx xx xx</p>
+                        <p style="margin-top:0.8rem;">
+                            Du er velkommen til at sende en kort beskrivelse af din situation – f.eks. nuværende anlæg,
+                            ønsket ændring eller idé. Så vender jeg tilbage med forslag til næste skridt.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                                        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- Netlify form setup -->
+                        <input type="hidden" name="form-name" value="kontakt">
+                        <p style="display:none;">
+                            <label>Du skal ikke udfylde dette felt: <input name="bot-field" /></label>
+                        </p>
+
+                        <div class="field">
+                            <label for="name">Navn</label>
+                            <input type="text" id="name" name="name" placeholder="Dit navn" required>
+                        </div>
+                        <div class="field">
+                            <label for="company">Firma</label>
+                            <input type="text" id="company" name="company" placeholder="Virksomhed (valgfri)">
+                        </div>
+                        <div class="field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="din@mail.dk" required>
+                        </div>
+                        <div class="field">
+                            <label for="subject">Emne</label>
+                            <input type="text" id="subject" name="subject" placeholder="Kort overskrift (valgfri)">
+                        </div>
+                        <div class="field">
+                            <label for="message">Beskrivelse</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Fortæl kort om din opgave, udfordring eller idé..." required></textarea>
+                        </div>
+<div class="field-inline">
+                            <input type="checkbox" id="call" name="call_request" value="Ja">
+                            <label for="call">Jeg vil gerne ringes op</label>
+                        </div>
+
+                        <div class="form-footer">
+                            <button type="submit" class="btn-primary">
+                                <span class="icon">🚀</span>
+                                <span>Send besked</span>
+                            </button>
+                            <div class="form-note">
+                                Når du trykker send, gemmes din besked sikkert via Netlify Forms. Jeg får beskeden på e-mail og vender tilbage hurtigst muligt.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> Dietz Code &amp; Control inden for automation & software.</span>
+        <span>Åben for projekter inden for  hele danmark – og remote.</span>
+    </div>
+</footer>
+
+<script>
+    // Mobilmenu
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Luk menu når man klikker på et link (mobil)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // År i footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69234fd8b229be19601c08cc/1jaouvpcv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

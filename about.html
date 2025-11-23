@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Om mig – Martin Dietz · Freelance udvikler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo_dietz.png" alt="Dietz Code &amp; Control" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Forside</a>
+                <a href="services.html">Ydelser</a>
+                <a href="cases.html">Cases</a>
+                <a href="about.html" aria-current="page">Om mig</a>
+                <a href="stack.html">Tech stack</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+            <button class="nav-cta" onclick="window.location.href='contact.html'">
+                Kontakt mig
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Om mig</h1>
+            <div class="about-layout">
+                <div>
+                    <p>
+                        Jeg hedder <strong>Martin Dietz</strong> og arbejder som freelance udvikler med fokus på
+                        <strong>automation, industri og software</strong>.
+                    </p>
+                    <p>
+                        Jeg er uddannet <strong>industritekniker</strong> og  <strong>automationsteknolog</strong>.
+                        Jeg har både stået ved maskinerne og siddet med koden – så jeg forstår hverdagen på gulvet og
+                        de krav, der følger med fra ledelse, kvalitet og drift.
+                    </p>
+                    <p>
+                        Jeg er ret direkte. Hvis noget er en dårlig idé, siger jeg det. Omvendt slipper jeg heller ikke
+                        et projekt, før kvaliteten er der, og løsningen er stabil. Når jeg står med noget nyt, bliver jeg
+                        ved, til jeg har styr på det.
+                    </p>
+                    <p>
+                        Hvis du har brug for en udvikler, der både kan tage sikkerhedssko på og tale med operatørerne
+                        <em>og</em> diskutere løsning og arkitektur med ledelsen, så er vi nok et godt match.
+                    </p>
+                </div>
+                <div class="about-highlight">
+                    <p><strong>Mine kendetegn:</strong></p>
+                    <div class="badge-row">
+                        <span class="badge">Forstår både produktion & kode</span>
+                        <span class="badge">Løser reelle problemer – ikke kun slides</span>
+                        <span class="badge">Ærlig kommunikation</span>
+                        <span class="badge">Detaljeorienteret fejlfinder</span>
+                        <span class="badge">Lærer ting hurtigt & giver ikke op</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> Dietz Code &amp; Control inden for automation & software.</span>
+        <span>Åben for projekter inden for ca. 60 km fra Kolding – og remote.</span>
+    </div>
+</footer>
+
+<script>
+    // Mobilmenu
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Luk menu når man klikker på et link (mobil)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // År i footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69234fd8b229be19601c08cc/1jaouvpcv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

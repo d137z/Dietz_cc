@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Cases – Martin Dietz · Freelance udvikler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html" class="logo">
+                <img src="logo_dietz.png" alt="Dietz Code &amp; Control" class="logo-img">
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Forside</a>
+                <a href="services.html">Ydelser</a>
+                <a href="cases.html" aria-current="page">Cases</a>
+                <a href="about.html">Om mig</a>
+                <a href="stack.html">Tech stack</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+            <button class="nav-cta" onclick="window.location.href='contact.html'">
+                Kontakt mig
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Åbn menu">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section>
+        <div class="container">
+            <h1 class="section-title">Cases</h1>
+            <p class="section-subtitle">
+                Et par konkrete eksempler på, hvad jeg har bygget – til undervisning, demo og reelle produktioner.
+            </p>
+
+            <div class="grid grid-2">
+                <article class="card case">
+                    <h3>Autonom pakkelogistik med MiR250 & Interroll</h3>
+                    <p>
+                        Udgangspunktet var en demostand, hvor pakker endte på gulvet i stedet for at blive håndteret struktureret.
+                        Jeg designede og implementerede en løsning, hvor en MiR250 med Interroll-topmodul automatisk henter pakker,
+                        får data via et eksternt program (Excel), sender info til TIA/PLC og leverer pakker til fiktive lokationer
+                        som Aarhus, Odense eller sikkerhedstjek.
+                    </p>
+                    <p class="case-label"><span>Resultat:</span> En fuldt demonstrerbar mini-logistikløsning, som kan bruges til undervisning,
+                        præsentationer og som base for rigtige anlæg.</p>
+                </article>
+
+                <article class="card case">
+                    <h3>Beskedportal til produktion (Flask + SQLite)</h3>
+                    <p>
+                        Behovet var et simpelt, men effektivt system til beskeder, opgaver og logning – uden tunge standardløsninger.
+                        Jeg udviklede en webbaseret beskedportal med login, roller, kanaler, ulæste beskeder, historik/versioner,
+                        billedehåndtering og mulighed for at overtage opgaver.
+                    </p>
+                    <p class="case-label"><span>Resultat:</span> Ét samlet sted til beskeder og opgaver – mindre kaos, færre post-its
+                        og markant bedre overblik.</p>
+                </article>
+
+                <article class="card case">
+                    <h3>UR-robot med vision til farvesortering</h3>
+                    <p>
+                        En UR-robot skulle finde farvede klodser (rød, blå, grøn), der lå vilkårligt, og samle dem op med et klo-værktøj.
+                        Med kamera, Python/OpenCV og koordinatoverførsel til robotten byggede jeg en POC-løsning, der demonstrerer
+                        samspillet mellem vision, software og robot.
+                    </p>
+                    <p class="case-label"><span>Resultat:</span> En stærk demo for, hvordan relativt simpel vision kan løse
+                        plukkeopgaver og danne grundlag for mere avancerede projekter.</p>
+                </article>
+
+                <article class="card case">
+                    <h3>IoT-prototyper med ESP32 & sensorer</h3>
+                    <p>
+                        Jeg har bl.a. arbejdet med ESP32-baserede enheder til automatisk overvågning og styring – f.eks.
+                        jordfugtigheds-måling og batteridrevne setups, der sender data trådløst til et overblik eller videre
+                        styring via Node-RED.
+                    </p>
+                    <p class="case-label"><span>Resultat:</span> Praksisnære prototyper, der hurtigt kan testes og senere skaleres op,
+                        hvis de viser sig at give værdi.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>© <span id="year"></span> Dietz Code &amp; Control inden for automation & software.</span>
+        <span>Åben for projekter inden for  hele danmark – og remote.</span>
+    </div>
+</footer>
+
+<script>
+    // Mobilmenu
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Luk menu når man klikker på et link (mobil)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // År i footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69234fd8b229be19601c08cc/1jaouvpcv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
